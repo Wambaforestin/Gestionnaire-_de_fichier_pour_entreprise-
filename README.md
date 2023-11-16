@@ -1,10 +1,10 @@
 # Gestionnaire-_de_fichier_pour_entreprise-
 
 Projet web : Administrateur système
-Ce projet consiste a  système simple pour permettre aux employés  d'une entreprise de télécharger, afficher et supprimer des fichiers stockés sur le serveur
+Ce projet consisté de concevoir système simple pour permettre aux employés d'une entreprise de télécharger, afficher et supprimer des fichiers stockés sur le serveur
 
 🌐 Projet web 🌐
-Ce projet est un site web simple qui utilise le serveur web Apache sur Debian 12. Il contient des pages HTML, des feuilles de style CSS et des scripts PHP. 🚀
+Ce projet est un site web responsive simple qui utilise le serveur web Apache sur Debian 12. Il contient des pages HTML, des feuilles de style CSS et des scripts PHP. 🚀
 
 🛠 Installation 🛠
 Pour installer ce projet, vous devez avoir Apache installé et configuré sur votre machine. Vous pouvez suivre ce tutoriel pour savoir comment faire : youtube: https://www.youtube.com/watch?v=CmO5iFM05wU , website: https://linuxways.net/debian/how-to-install-apache2-web-server-on-debian-12/.
