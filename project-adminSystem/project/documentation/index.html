@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+    <meta charset="utf-8">
+    <title>Documentation de l'Interface Web pour Télécharger des Fichiers</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        body {
+            background: #222;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-weight: 300;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, ul, ol, li {
+            font-size: 1.1em;
+            line-height: 1.5em;
+        }
+        ul, ol {
+            margin-left: 40px;
+        }
+        a {
+            color: #2ecc71;
+            text-decoration: underline;
+        }
+        video {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            color:  #2ecc71;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        .file-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background:  #2ecc71;
+            color: #333;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .file-input {
+            display: none;
+        }
+        .submit-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background:  #2ecc71;
+            color: #333;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .screenshot {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 10px auto;
+            border: 2px solid  #2ecc71;
+            border-radius: 10px;
+        }
+        .screenshot-wrapper{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 25px;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentation de l'interface Web pour Télécharger ,Afficher ,et supprimer des fichiers.</h1>
+        <p>Cette documentation vous explique comment utiliser l'interface web que vous avez créée pour télécharger, afficher et supprimer des fichiers sur un serveur Apache. L'interface web est composée de trois fichiers PHP : index.php, upload.php et delete.php, et d'un répertoire uploads qui contient les fichiers téléchargés.</p>
+        <p>Pour concevoir cette l'interface web,  je me suis rasuré d'avoir installé et configuré le serveur Apache sur mon système Debian 12, ainsi que le module PHP pour traiter les fichiers PHP.J'ai également mit une copié des fichiers PHP et le répertoire uploads dans le répertoire racine du serveur web, généralement /var/www/html/project. J'ai également donné les permissions appropriées aux fichiers PHP et au répertoire uploads pour permettre au serveur web de les lire et de les écrire.</p>
+        <p>Dans les pages suivantes, vous trouverez le sommaire de la documentation, ainsi que les explications détaillées et les captures d'écran pour chaque fonctionnalité de l'interface web. Vous trouverez également une section qui contient une vidéo-capture du site, puis nous allons terminez avec qu'une conclusion.</p>
+        <div class="navigation">
+            <a href="#sommaire">Sommaire</a>
+            <a href="#video">Vidéo-capture du site</a>
+            <a href="#conclusion">Conclusion</a>
+        </div>
+        <h2 id="sommaire">Sommaire de la Documentation</h2>
+        <ol type="i">
+            <li><a href="#index">Page d'accueil de l'interface web</a></li>
+            <li><a href="#upload">Téléchargement de fichiers</a></li>
+            <li><a href="#delete">Suppression de fichiers</a></li>
+            <li><a href="#video">Vidéo-capture du site</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+        <h2 id="index">Page d'accueil de l'interface web</h2>
+        <p>La page d'accueil de l'interface web est le fichier index.php, qui contient le formulaire pour télécharger des fichiers et la liste des fichiers existants. Vous pouvez accéder à cette page en ouvrant un navigateur web et en entrant l'adresse IP ou le nom de domaine de votre serveur, suivi de /index.php. Par exemple:</p>
+        <p>http://localhost/project/index.php</p>
+        <p>Vous devriez voir une page comme celle-ci:</p>
+        <img src="h1.png" alt="Page d'accueil de l'interface web" class="screenshot"><br>
+        <p>Pour télécharger un fichier, vous devez cliquer sur le bouton <big>"Choisir un fichier"</big>, qui ouvre une fenêtre pour sélectionner un fichier depuis votre appareil. Vous pouvez choisir n'importe quel fichier de type <b>txt, csv, html, ou sh</b>. Une fois que vous avez choisi un fichier, vous devez sur le button <big>"ouvrir"</big>puis sur la page d'accueil cliquer sur le bouton <big>"Télécharger le Fichier"</big>, qui envoie le fichier au serveur. Vous verrez alors un message indiquant si le téléchargement a réussi ou non.</p>
+        <p>Pour afficher ou supprimer un fichier, vous devez utiliser la liste déroulante qui contient les noms des fichiers stockés dans le répertoire <big><i>uploads</i></big>. Vous pouvez sélectionner un fichier et cliquer sur le lien "Afficher" pour ouvrir le fichier dans un nouvel onglet, ou cliquer sur le bouton <big>"Supprimer"</big> pour supprimer le fichier du serveur. Vous n'allez plus voir le fiche sur la liste</p>
+        <h2 id="upload">Téléchargement de fichiers</h2><br>
+        <p>Le téléchargement de fichiers est géré par le fichier upload.php, qui reçoit le fichier depuis le formulaire de la page index.php et le sauvegarde dans le répertoire uploads. Vous n'avez pas besoin d'accéder directement à ce fichier, il est appelé automatiquement lorsque vous soumettez le formulaire de la page index.php.</p>
+        <p>Voici un exemple de message que vous pouvez voir après avoir téléchargé un fichier valide:</p>
+        <div class="screenshot-wrapper">
+            <img src="h2.png" alt="Message de succès après le téléchargement" class="screenshot"><br>
+            <img src="h3.png" alt="Message de succès après le téléchargement" class="screenshot"><br>
+        </div>
+        <h2 id="delete">Suppression de fichiers</h2>
+        <p>La suppression de fichiers est gérée par le fichier delete.php, qui reçoit le nom du fichier à supprimer depuis le formulaire de la page index.php et le supprime du répertoire uploads. Vous n'avez pas besoin d'accéder directement à ce fichier, il est appelé automatiquement lorsque vous cliquez sur le bouton <big>"Supprimer"</big> de la page index.php.</p>
+        <p>Voici un exemple de message que vous pouvez voir après avoir supprimé un fichier existant:</p>
+        <div class="screenshot-wrapper">
+            <img src="h4.png" alt="Message de succès après la suppression" class="screenshot"><br>
+            <img src="h5.png" alt="Message de succès après la suppression" class="screenshot"><br>
+        </div>
+        <h2 id="video">Vidéo-capture du site</h2>
+        <p>Dans cette page, vous allez voir une vidéo qui montre le fonctionnement de l'interface web, avec une narration ou des sous-titres pour expliquer les actions effectuées. La vidéo dure environ 2 minutes et couvre les principales fonctionnalités de l'interface web, comme le téléchargement, l'affichage et la suppression de fichiers. Vous pouvez regarder la vidéo en plein écran ou en mode fenêtré, et ajuster le volume ou la qualité selon vos préférences.</p>
+        <video src="videolinux.mp4" controls>
+            Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+        <p>Voilà, vous avez vu la vidéo-capture du site. Vous pouvez revenir au sommaire ou passer à la conclusion.</p>
+        <p><a href="#sommaire">Sommaire</a> | <a href="#conclusion">Conclusion</a></p>
+        <h2 id="conclusion">Conclusion de la Documentation</h2>
+
+        <p>Dans cette documentation, vous avez appris comment utiliser l'interface web que j'ai concu pour télécharger, afficher et supprimer des fichiers sur un serveur Apache. Vous avez vu les prérequis nécessaires pour utiliser l'interface web, ainsi que les explications détaillées et les captures d'écran pour chaque fonctionnalité. Vous avez également vu une vidéo-capture du site qui montre le fonctionnement de l'interface web.</p>
+        <p>L'interface web que j'ai cree présente plusieurs avantages, comme la simplicité, la rapidité et la sécurité. Vous pouvez facilement télécharger, afficher et supprimer des fichiers sur le serveur, sans avoir besoin de connaissances techniques ou de logiciels spécifiques. </p>
+        <p>L'interface web que j'ai créée présente également quelques limites, comme la dépendance au serveur Apache, la compatibilité avec les navigateurs web et la gestion des erreurs tels que la tail,redundance des fichiers,et bien d"autre. Vous devez avoir installé et configuré le serveur Apache sur votre système Debian 12, ainsi que le module PHP pour traiter les fichiers PHP.</p>        <p>Nous espérons que cette documentation vous a été utile et que vous avez apprécié l'utilisation de l'interface web. Merci de votre attention et à bientôt.</p>
+    </div>
+    <footer>
+        <p>Cette documentation a ete cree avec les cours et les examples sur le site <big><i>w3schools.com</i></big> un site web qui apprend comment creer des sites web dynamiques avec le language php.</p>
+        <p>Pour en savoir plus sur w3schools, visitez <a href="https://www.w3schools.com/php/default.asp">w3schools.com</a></p>
+    </footer>
+</body>
+</html>
