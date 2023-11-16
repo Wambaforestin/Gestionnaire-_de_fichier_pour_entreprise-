@@ -45,9 +45,11 @@ $directory = "uploads/";
             align-items: center;
             z-index: 1000;
         }
+
         header h1 {
             color: #fff;
         }
+
         .navigation {
             display: flex;
         }
@@ -188,6 +190,7 @@ $directory = "uploads/";
                 transform: translateY(0px) rotate(45deg);
                 box-shadow: 0 0 0 #fff;
             }
+
             .toggle::after {
                 content: '';
                 position: absolute;
@@ -266,7 +269,9 @@ $directory = "uploads/";
         .submit-btn:hover {
             background: #333;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             color: #333;
         }
 
@@ -381,7 +386,7 @@ $directory = "uploads/";
                     interne. Un outil convivial basé sur Apache et PHP pour faciliter la gestion des données de
                     l'entreprise.</p>
                 <a href="#" class="btn">Contact Us</a>
-            </div>            
+            </div>
             <div class="form-container">
                 <h2 class="form-title">Téléchargez votre fichier</h2>
                 <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -395,21 +400,21 @@ $directory = "uploads/";
                 <form action="delete.php" method="post">
                     <label for="fileToDelete">Sélectionnez un fichier à supprimer : </label>
                     <select name="fileToDelete" id="fileToDelete">
-                    <?php
-                    // Affiche la liste des fichiers pour la suppression
-                    $files = scandir($directory);
-                    $files = array_slice($files,2); //supprimez les deux premieres entrees du tableau
-                    foreach ($files as $file) {
-                        if ($file != "." && $file != ".."){
-                            echo '<option value="' .$file . '">' .$file . '</option>';
+                        <?php
+                        // Affiche la liste des fichiers pour la suppression
+                        $files = scandir($directory);
+                        $files = array_slice($files, 2); //supprimez les deux premieres entrees du tableau
+                        foreach ($files as $file) {
+                            if ($file != "." && $file != "..") {
+                                echo '<option value="' . $file . '">' . $file . '</option>';
+                            }
                         }
-                    }
-                    ?>
+                        ?>
                     </select>
                     <button type="submit" name="delete">Supprimer</button>
                 </form>
             </div>
-            
+
     </section>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

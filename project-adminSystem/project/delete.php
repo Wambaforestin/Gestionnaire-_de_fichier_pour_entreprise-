@@ -8,7 +8,7 @@ $filePath = $directory . $fileToDelete;
 
 // Vérifiez si le fichier existe avant de le supprimer
 if (file_exists($filePath)) {
-    if (unlink($filePath)){
+    if (unlink($filePath)) {
         echo "Le fichier $fileToDelete a été supprimé avec succès.";
     } else {
         echo "Erreur lors de la suppression du ficher.";
