@@ -94,9 +94,9 @@ video {
     cursor: pointer;
 }
 
-/* .file-input {
+ .file-input {
     display: none;
-} */
+} 
 
 .submit-btn {
     display: inline-block;
