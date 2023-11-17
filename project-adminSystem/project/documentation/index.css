@@ -121,6 +121,7 @@ video {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    padding-left: 15px;
 }
 
 footer {
