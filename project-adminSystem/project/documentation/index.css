@@ -123,6 +123,7 @@ video {
     margin: 10px auto;
     border: 2px solid #2ecc71;
     border-radius: 10px;
+    height: 200px;
 }
 .screenshot-wrapper {
     display: flex;
