@@ -116,7 +116,8 @@ video {
     border: 2px solid #2ecc71;
     border-radius: 10px;
 }
-.screenshot-wrapper .screens {
+.screens {
+    padding-left: 5px;
     width: 50%;
     max-width: 500px;
     display: block;
