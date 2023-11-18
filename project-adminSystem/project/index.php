@@ -20,7 +20,7 @@ $directory = "uploads/";
             <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
-                <li><a href="uploads">Your Files</a></li>
+                <li><a href="#">Your Files</a></li>
                 <li><a href="documentation" target="_blank">Documentation</a></li>
             </ul>
         </header>
