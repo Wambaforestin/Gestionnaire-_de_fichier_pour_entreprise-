@@ -21,7 +21,7 @@ $directory = "uploads/";
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="documentation">Documentation</a></li>
+                <li><a href="documentation" target="_blank">Documentation</a></li>
             </ul>
         </header>
         <div class="content">
