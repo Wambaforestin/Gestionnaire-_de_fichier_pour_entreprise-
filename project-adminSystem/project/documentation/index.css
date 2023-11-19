@@ -132,13 +132,15 @@ footer {
 }
 
 #m {
-    width: 200px;
+    width: 300px;
     height: 500px;
+    margin-left: 20px;
 }
 
 #i {
     width: 400px;
     height: 500px;
+    margin-left: 10px;
 }
 #d {
     width: 500px;
