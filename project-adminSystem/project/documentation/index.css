@@ -94,9 +94,9 @@ video {
     cursor: pointer;
 }
 
- .file-input {
+.file-input {
     display: none;
-} 
+}
 
 .submit-btn {
     display: inline-block;
@@ -111,7 +111,7 @@ video {
 .screenshot {
     width: 100%;
     max-width: 500px;
-    display: block;
+    display: inline-block;
     margin: 10px auto;
     border: 2px solid #2ecc71;
     border-radius: 10px;
@@ -129,4 +129,14 @@ footer {
     padding: 25px;
     align-items: center;
 
+}
+
+#m {
+    width: 200px;
+    height: 400px;
+}
+
+#i {
+    width: 400px;
+    height: 300px;
 }
