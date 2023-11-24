@@ -1,7 +1,6 @@
 <?php
 $directory = "uploads/";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,9 +17,9 @@ $directory = "uploads/";
             <a href="#"><img src="" class="logo"></a>
             <div class="toggle"></div>
             <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Your Files</a></li>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Gérer les fichiers</a></li>
+                <li><a href="uploads">Mes Fichiers</a></li>
                 <li><a href="documentation" target="_blank">Documentation</a></li>
             </ul>
         </header>

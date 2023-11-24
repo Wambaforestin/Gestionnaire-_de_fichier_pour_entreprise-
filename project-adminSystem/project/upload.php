@@ -1,12 +1,57 @@
 <?php
-if (isset($_POST['submit'])) {
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["file"]["name"]);
+// Définissez le répertoire où les fichiers seront sauvegardés
+$target_dir = "uploads/";
 
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-        echo "Le fichier " . basename($_FILES["file"]["name"]) . " a été téléchargé avec succès.";
+// Obtenez le nom et le chemin du fichier depuis le formulaire
+$target_file = $target_dir . basename($_FILES["file"]["name"]);
+
+// Initialisez une variable pour indiquer si le téléchargement est réussi ou non
+$uploadOk = 1;
+
+// Obtenez l'extension du fichier
+$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+// Vérifiez si l'utilisateur a soumis le formulaire
+if(isset($_POST["submit"])) {
+
+    // Vérifiez si le fichier est un fichier valide ou un faux fichier
+    $check = getimagesize($_FILES["file"]["tmp_name"]);
+    if($check !== false) {
+        echo "Le fichier est un fichier valide - " . $check["mime"] . ".<br>";
+        $uploadOk = 1;
     } else {
-        echo "Une erreur s'est produite lors du téléchargement du fichier.";
+        echo "Le fichier n'est pas un fichier valide.<br>";
+        $uploadOk = 0;
+    }
+
+    // Vérifiez si le fichier existe déjà
+    if (file_exists($target_file)) {
+        echo "Désolé, le fichier existe déjà.<br>";
+        $uploadOk = 0;
+    }
+
+    // Vérifiez la taille du fichier
+    if ($_FILES["file"]["size"] > 500000) {
+        echo "Désolé, votre fichier est trop grand.<br>";
+        $uploadOk = 0;
+    }
+
+    // Autorisez seulement certaines extensions de fichier
+    if($fileType != "jpg" && $fileType != "png" && $fileType != "jpeg" && $fileType != "gif" ) {
+        echo "Désolé, seuls les fichiers JPG, JPEG, PNG & GIF sont autorisés.<br>";
+        $uploadOk = 0;
+    }
+
+    // Vérifiez si $uploadOk est mis à 0 par une erreur
+    if ($uploadOk == 0) {
+        echo "Désolé, votre fichier n'a pas été téléchargé.<br>";
+    // Si tout est ok, essayez de télécharger le fichier
+    } else {
+        if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+            echo "Le fichier ". htmlspecialchars( basename( $_FILES["file"]["name"])). " a été téléchargé avec success.<br>";
+        } else {
+            echo "Désolé, il y a eu une erreur lors du téléchargement de votre fichier.<br>";
+        }
     }
 }
 ?>
