@@ -8,12 +8,13 @@ $directory = "uploads/";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>\\---- Interface Web ----//</title>
+    <link rel="icon" href="icon.ico" type="image/ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="main">
         <header>
-            <h1>logo</h1>
+            <h1>FichA.</h1>
             <a href="#"><img src="" class="logo"></a>
             <div class="toggle"></div>
             <ul class="navigation">
@@ -27,7 +28,7 @@ $directory = "uploads/";
             <div class="text">
                 <h2>Bienvenue sur notre Plateforme de<span> Gestion de Fichiers.</span></h2>
                 <p>Simplifiez vos tâches en téléchargeant, visualisant et supprimant facilement les fichiers du serveur
-                    interne. Un outil convivial basé sur Apache et PHP pour faciliter la gestion des données de
+                    interne. Un outil convivial basé sur Apache et PHP pour faciliter la gestion des fichiers de
                     l'entreprise.</p>
                 <a href="#" class="btn">Contact Us</a>
             </div>
@@ -62,7 +63,6 @@ $directory = "uploads/";
     </section>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
     <script>
         //toggle 
         const menutoggle = document.querySelector('.toggle');

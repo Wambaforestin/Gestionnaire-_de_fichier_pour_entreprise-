@@ -32,7 +32,8 @@ header {
 }
 
 header h1 {
-    color: #fff;
+    background: linear-gradient(to right, #f0483a 0% , #333 100%);
+
 }
 
 .navigation {

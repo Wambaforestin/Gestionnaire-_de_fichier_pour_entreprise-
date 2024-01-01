@@ -41,7 +41,12 @@ h3 {
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
+span {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2ecc71;
+}
 p,
 ul,
 ol,
@@ -142,10 +147,12 @@ footer {
     height: 500px;
     margin-left: 10px;
 }
+
 #d {
     width: 500px;
     height: 500px;
 }
-marquee{
+
+marquee {
     color: #2ecc71;
 }

@@ -3,17 +3,18 @@
 
 <head lang="fr">
     <meta charset="utf-8">
-    <title>Documentation de l'Interface Web pour Télécharger des Fichiers</title>
+    <title>Documentation du gestionaire de fichier de Fichiers</title>
+    <link rel="icon" href="images/icon.ico" type="image/ico">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Documentation de l'interface Web pour Télécharger ,Afficher ,et supprimer des fichiers.</h1>
-        <p>Cette documentation vous explique comment utiliser l'interface web que vous avez créée pour télécharger,
-            afficher et supprimer des fichiers sur un serveur Apache. L'interface web est composée de trois fichiers PHP
+        <h1>Documentation du gestionaire de fichier <em><a href="../index.php">FichA.</a></em></h1>
+        <p>Cette documentation vous explique comment utiliser FichA. que j'ai créée pour pour facilité le téléchargement,
+            affichage et la suppression des fichiers sur un serveur Apache. FichA. est composée de trois fichiers PHP
             : index.php, upload.php et delete.php, et d'un répertoire uploads qui contient les fichiers téléchargés.</p>
-        <p>Pour concevoir cette l'interface web, je me suis rasuré d'avoir installé et configuré le serveur Apache sur
+        <p>Pour concevoir cette FichA. , je me suis rasuré d'avoir installé et configuré le serveur Apache sur
             mon système Debian 12, ainsi que le module PHP pour traiter les fichiers PHP.J'ai également mit une copié
             des fichiers PHP et le répertoire uploads dans le répertoire racine du serveur web, généralement
             /var/www/html/project. J'ai également donné les permissions appropriées aux fichiers PHP et au répertoire
@@ -35,7 +36,7 @@
             <li><a href="#multi">multi-platform </a></li>
             <li><a href="#conclusion">Conclusion</a></li>
         </ol>
-        <h2 id="index">Page d'accueil de l'interface web</h2>
+        <h2 id="index">Page d'accueil de FichA.</h2>
         <p>La page d'accueil de l'interface web est le fichier index.php, qui contient le formulaire pour télécharger
             des fichiers et la liste des fichiers existants. Vous pouvez accéder à cette page en ouvrant un navigateur
             web et en entrant l'adresse IP ou le nom de domaine de votre serveur, suivi de /index.php. Par exemple:</p>
@@ -58,6 +59,7 @@
             de la page index.php et le sauvegarde dans le répertoire uploads. Vous n'avez pas besoin d'accéder
             directement à ce fichier, il est appelé automatiquement lorsque vous soumettez le formulaire de la page
             index.php.</p>
+        <h2><span>NOTE BIEN</span>: vous devez toujour rafreschir la page pour voir le fichier que vous venez de télécharger dans la liste des fichiers</h2>
         <p>Voici un exemple de message que vous pouvez voir après avoir téléchargé un fichier valide:</p>
         <div class="screenshot-wrapper">
             <img src="images/h2.png" alt="Message de succès après le téléchargement" class="screenshot"><br>
