@@ -8,6 +8,21 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* modifying the page scroll bar */
+::-webkit-scrollbar {
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0483a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10rem;
+}
+
 .main {
     position: relative;
     min-height: 100vh;
@@ -255,7 +270,6 @@ header h1 {
 .submit-btn:hover {
     background: #333;
 }
-
 h1,
 h2 {
     color: #333;
@@ -326,7 +340,7 @@ form[name="deleteForm"] select {
 form[name="deleteForm"] button {
     background-color: #ff4d4d;
 }
-
+/* now, make it responsive */
 
 @media (max-width:480px) {
 
